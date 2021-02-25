@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.easv.oe.friends.Model.Friends
 import com.easv.oe.friends.R
 import kotlinx.android.synthetic.main.activity_main.*
-
+import java.io.Serializable
 
 
 class MainActivity : AppCompatActivity() {
@@ -45,10 +45,10 @@ class MainActivity : AppCompatActivity() {
         ).show()*/
         val intent = Intent(this, DetailActivity::class.java)
         val friend = Friends().getAll()[position]
-
-        intent.putExtra("name", friend.name )
+        intent.putExtra("friend", friend)
+        /*intent.putExtra("name", friend.name )
         intent.putExtra("phone", friend.phone)
-        intent.putExtra("favorite", friend.isFavorite)
+        intent.putExtra("favorite", friend.isFavorite)*/
         startActivity(intent)
 
     }

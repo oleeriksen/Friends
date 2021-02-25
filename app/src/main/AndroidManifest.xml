@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Friends">
-        <activity android:name=".GUI.DetailActivity"></activity>
-        <activity android:name=".GUI.MainActivity">
+        <activity android:name=".GUI.DetailActivity" />
+        <activity android:name=".GUI.RecyclerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
