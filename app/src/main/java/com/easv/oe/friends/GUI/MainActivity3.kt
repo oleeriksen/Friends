@@ -44,9 +44,8 @@ class MainActivity3 : ListActivity() {
         override fun getView(position: Int, v: View?, parent: ViewGroup): View {
             var v1: View? = v
             if (v1 == null) {
-                    val li = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)
-                             as LayoutInflater
-                v1 = li.inflate(R.layout.cell_extended, null)
+                val mInflater = LayoutInflater.from(context)
+                v1 = mInflater.inflate(R.layout.cell_extended, null)
 
             }
             val resView: View = v1!!

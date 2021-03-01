@@ -29,6 +29,6 @@ class RecyclerActivity : AppCompatActivity(), IClickItemListener {
     }
 
     override fun onFriendClick(f: BEFriend, position: Int) {
-        Toast.makeText(this, "Position $position clicked",Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "Position $position clicked, name=${f.name}",Toast.LENGTH_LONG).show()
     }
 }

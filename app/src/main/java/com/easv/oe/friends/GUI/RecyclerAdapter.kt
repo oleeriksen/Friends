@@ -1,6 +1,7 @@
 package com.easv.oe.friends.GUI
 
 import android.content.Context
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -39,6 +40,7 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.FriendHolder> {
         holder.mPhone.text = f.phone
         holder.mFavorite.setImageResource(if (f.isFavorite) R.drawable.ok else R.drawable.notok)
         holder.view.setOnClickListener { v -> mItemListener.onFriendClick(f,position) }
+        holder.view.setBackgroundColor(if (position % 2 == 0) Color.GRAY else Color.GREEN)
 
     }
 
