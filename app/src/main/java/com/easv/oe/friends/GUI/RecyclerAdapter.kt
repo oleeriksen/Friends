@@ -1,7 +1,11 @@
 package com.easv.oe.friends.GUI
 
 import android.content.Context
+<<<<<<< Updated upstream
 import android.graphics.Color
+=======
+import android.util.Log
+>>>>>>> Stashed changes
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,6 +19,7 @@ import com.easv.oe.friends.R
 
 class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.FriendHolder> {
 
+    private val TAG = "xyz"
     private val mDataset: Friends
     private val mInflater: LayoutInflater
     private val mItemListener: IClickItemListener
@@ -31,6 +36,7 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.FriendHolder> {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FriendHolder {
         val view: View = mInflater.inflate(R.layout.cell_extended, parent,false)
 
+        Log.d(TAG, "ViewHolder CREATED")
         return FriendHolder(view)
     }
 
@@ -41,6 +47,8 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.FriendHolder> {
         holder.mFavorite.setImageResource(if (f.isFavorite) R.drawable.ok else R.drawable.notok)
         holder.view.setOnClickListener { v -> mItemListener.onFriendClick(f,position) }
         holder.view.setBackgroundColor(if (position % 2 == 0) Color.GRAY else Color.GREEN)
+
+        Log.d(TAG, "Viewholder BIND")
 
     }
 
